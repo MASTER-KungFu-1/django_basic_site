@@ -1,0 +1,46 @@
+button {
+    display: flex;
+    color: #fff;
+    background: linear-gradient(to bottom, black, #0072e0);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 26px;
+    border-radius: 100px;
+    /* Прозрачная граница, предназначенная для вывода варианта той же кнопки с обводкой */
+    border: 3px solid transparent;
+    text-decoration: none;
+    margin: auto;
+}
+
+h1 {
+    display: inline-block;
+    margin: 0, auto;
+    color: blue;
+}
+body {
+    background-color: black;
+    color: aqua;
+}
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 0, auto;
+    background-color: gray;
+    
+}
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: gray;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.s1{
+    margin-top: 30px;
+    margin-top: 30px;
+}

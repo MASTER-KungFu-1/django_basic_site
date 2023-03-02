@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="{%static 'new_style.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>S-DES</title>
+  </head>
+  <body>
+    <style> 
+    body {
+        background-color: black ;
+        color: aqua;
+        
+     }
+    </style>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+          <h1 class="text-center">S-DES Кодирование</h1>
+          <h2 class="text-center">Закодируйте сообщение</h2>
+          <form method="post" action="{% url 'crypto' %}">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="message">Введите сообщение (8 бит ):</label>
+              <input type="text" id="message" name="message" class="form-control" minlength="8" maxlength="8" required>
+            </div>
+            <div class="form-group">
+              <label for="key">Введите ключ (10 бит):</label>
+              <input type="text" id="key" name="key" class="form-control" minlength="10" maxlength="10" required>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary" name="encode">Закодировать</button>
+              <button class="btn btn-primary" name="decode">Декодировать</button>
+            </div>
+          </form>
+          <h2 class="text-center">Результат</h2>
+          <h1 id="result" class="text-center">{{ result }}</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
